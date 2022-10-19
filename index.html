@@ -1,0 +1,382 @@
+<!----------------------
+    @Name: Hridoy Rahman
+    @StudentID: 7340334
+    @Version: 1.0
+ ------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Blog</title>
+
+        <script src="https://kit.fontawesome.com/147f60015f.js" crossorigin="anonymous"></script>
+
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+
+            /*Header CSS file */
+            .header {
+                background-color: skyblue;
+                width: 800px;
+                height: 25px;
+                color: #ffffff;
+                padding: 45px;
+                font-size: 18px;
+            }
+
+            .header h1{
+                position: fixed;
+                margin-top: -49px;
+                margin-left: -21px;
+                padding: 10px;
+                color: black;
+                font-weight: bolder;
+            }
+
+            .topnav a{
+                display: inline-block;
+                position: relative;
+                padding: 25px 0px 10px 10px;
+                margin: -10px 5px 0px 15px;
+                color: black;
+                text-decoration: none;
+            }
+
+            .topnav a:hover{
+                color: blue;
+            }
+
+            .move1 i{
+                display: block;
+                position: fixed;
+                color: #94dfdb;
+                left: 45px;
+            }
+
+            .move1 span{
+                display: inline-block;
+                position: relative;
+                top: 5px;
+            }
+            
+            /* Custom icon added */
+            .quill {
+                display: inline-block;
+                content: url("quill_pen.png");
+                height: 30px;
+                width: 35px;
+            }
+
+            .envelope{
+                display: inline-block;
+                content: url("envelope.png");
+                height: 30px;
+                width: 25px;
+            }
+
+            .right{
+                position: fixed;
+                top: 55px;
+                left: 680px;
+            }
+
+            .right a{
+                float: right;
+                margin: 0px 10px 20px 20px;
+                color: #94dfdb;
+            }
+
+            /*----------------Header End-----------------*/
+            .contentBody{
+                width: 800px;
+                height: 600px;
+                color: red;
+                padding: 45px;
+                font-size: 18px;
+            }
+
+            /*Content Body CSS file */
+            .innerBodyCont{
+                color: black;
+                margin-left: -20px;
+                padding: 10px;"
+            }
+
+            .button{
+                display: inline-block;
+                background-color: skyblue;
+                text-align: center;
+                width: 125px;
+                height: 25px;
+                color: #ffffff;
+                padding: 17px;
+                margin-left: -10px;
+                margin-bottom: -10px;
+                font-size: 18px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .column1 {
+                position: fixed;
+                float: left;
+                width:  590px;
+                height: 500px;
+            }
+
+            .column2 {
+                position: fixed;
+                float: left;
+                width: 210px;
+                height: 590px;
+                margin-left: 680px;
+            }
+
+            .sidenav {
+                width: 130px;
+                position: fixed;
+                top: 170px;
+                left: 700px;
+                overflow-x: hidden;
+                padding: 8px 0;
+
+            }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: grey;
+                display: block;
+                border-left: 4px solid #d6d7db;
+                height: 25px;
+            }
+
+            .sidenav a:hover {
+                height: 20px;
+                background-image: linear-gradient(to right, #00b0a7, #00b0a7 2px, #ffffff 4px, #ffffff 2px);
+                border-left: 2px;
+            }
+
+            .category {
+                position: fixed;
+                font-size: 22px;
+                top: 110px;
+                left: 712px;
+            }
+
+            .boxTop{
+                display: inline-block;
+                position: fixed;
+                top: 380px;
+                left: 700px;
+                background-color: #82c6e2;
+                border-radius: 4px;
+                padding: 10px;
+                width: 177px;
+                height: 25px;
+            }
+
+            .boxTop i{
+                display: inline-block;
+                position: fixed;
+                top: 403px;
+                left: 870px;
+            }
+
+            .boxTop h4{
+                font-size: 20px;
+            }
+
+            .boxDisplay {
+                display: inline-block;
+                position: fixed;
+                top: 380px;
+                left: 700px;
+                border-radius: 3px;
+                background-color: skyblue; 
+                padding: 10px;
+                width: 177px;
+                height: 170px;
+            }
+
+            .boxDisplay p{
+                display: inline-block;
+                position: relative;
+                padding: 5px;
+                margin-bottom: -20px;
+                top: 30px;
+            }
+
+            /* ------------------------ Content Body End ------------------------- */
+
+
+            /* Footer CSS file */
+            .footer {
+                background-color: skyblue;
+                position: fixed;
+                top: 730px;
+                width: 800px;
+                height: 16px;
+                color: #ffffff;
+                padding: 44px;
+                font-size: 18px;
+            }
+
+            .footer a{
+                display: inline-block;
+                font-weight: bold;
+                margin: 0px 10px 0px 8px;
+                padding: 10px 0px 0px -30px;
+                color: #000000;
+                font-size: 13px;
+                color: #646672;
+                text-decoration: none;
+            }
+
+            .move{
+                display: inline-block;
+                position: fixed;
+                top: 760px;
+                left: 35px;
+            }
+
+            /* ------------------------ Footer End ------------------------- */
+        </style>
+    </head>
+
+    <!--------------------------- Body Start ------------------------------>
+    <body>
+        <!--------------------------- Header ------------------------------>
+        <div id="header" class="header">
+            <div>
+                <h1> My Blog! </h1>
+            </div>
+            <div id="topnav" class="topnav">
+                <div class="move1">
+                    <a href="https://www.w3schools.com/"> 
+                        <i class="fa-lg fa-sharp fa-solid fa-house-chimney" style="position: fixed; top:85px"></i>
+                        Home
+                    </a>
+                    <a href="https://www.w3schools.com/css/default.asp"> 
+                        <span class="quill">
+                        </span>
+                        Blog
+                    </a>
+                    <a href="https://www.google.com/gmail/about/"> 
+                        <span class="envelope">
+                        </span>
+                        Contact
+                    </a>
+                    <a id="color" href="#" onclick="changeColor()">Colour</a>       
+                </div>
+                <div class="right">
+                    <a href="https://www.bell.ca/Bell_Internet"> <i class="fa-xl fas fa-wifi" style="transform: rotate(45deg);"> </i> </a>
+                    <a href="https://twitter.com/?lang=en"> <i class="fa-xl fab fa-twitter"></i> </a> 
+                    <a href="https://www.facebook.com/"> <i class="fa-xl fab fa-facebook-square"></i> </a>                    
+                </div>
+            </div>
+        </div>
+        <!--------------------------- Content Body ------------------------------>
+        <div id="contentBody" class="row">
+            <div class="contentBody column1">
+                <h1 style="color: #232323; position:  fixed; top: 100px; margin-left: -20px;padding: 10px;"> <b>A2 is out! </b></h1>
+                <div>
+                    <p style="color: grey;margin-left: -20px;padding: 10px;"> Published October 1, 2022 </p>
+                </div>
+                <div>
+                    <p class="innerBodyCont">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="innerBodyCont"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.  </p>  
+                </div>
+                <div class="button">
+                    <a href="https://www.sciencenews.org/article/seabirds-typhoons-shearwaters-survival" style="color: white; margin-top: -1px;padding: 5px; text-decoration: none;"> Read More </a>
+                </div>
+                <div>
+                    &nbsp;
+                </div>
+                <div>
+                <p style="color: #e8e8eb; margin-left: -10px;">_______________________________________________________________</p>
+                </div>
+            </div>
+            <div id="column2" class="column2">
+                <h2 class="category"> Categories </h2>
+                <div class="sidenav">
+                    <a href="https://www.ihsa.ca/News-Events"> News </a>
+                    <a href="http://www.cosc.brocku.ca/~hr21it/A1/about_me.html"> About </a>
+                    <a href="https://leetcode.com/"> Services </a>
+                    <a href="https://www.linkedin.com/in/hridoy-rahman/"> Portfolio </a>
+                    <a href="https://www.google.com/gmail/about/"> Contact </a>
+                </div>
+                <div id="boxDisplay" class="boxDisplay">
+                    <div class="boxTop">
+                        <a href="https://medium.com/@Harshit_/an-ai-generated-content-on-gpt-3-ai-34f304df6b67" style="color:black; text-decoration: none;"> 
+                            <i class="fa-lg far fa-file" ></i>
+                        </a>
+                        <h4 class="category" style="top: 364px;left: 717px;"> Recent Posts </h4>
+                    </div>
+                    <p> <b> <a href="https://medium.com/@Harshit_/an-ai-generated-content-on-gpt-3-ai-34f304df6b67" style="color:black; text-decoration: none;"> More News! </a> </b> </p> <br>
+                    <p> Not generated by <br> GPT-3... </p>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------------- Footer ------------------------------>
+
+        <div id="footer" class="footer">
+            <div class="move">
+                <a href="http://www.cosc.brocku.ca/~hr21it/A1/index.html"> WEBSITE NAME </a>
+                <a href="https://www.geeksforgeeks.org/"> HOME </a>
+                <a href="https://www.geeksforgeeks.org/java/?ref=shm"> BLOG </a>
+                <a href="https://www.cnn.com/business/tech"> NEWS & EVENTS </a>
+                <a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"> LOGIN </a>
+                <a href="https://www.linkedin.com/signup/cold-join?source=guest_homepage-basic_nav-header-signin"> SIGN UP </a>
+            </div>
+            <div>
+                <p style="color: grey; font-size: 12px; margin: 15px 0px 0px -8px; padding: 5px 0px 0px 0px;"> <span style="color: grey;">&copy</span> 2022 Website. All rights reserved. </p>
+            </div>
+        </div>
+
+        <!-- JAVA SCRIPT STARTS -->
+         <script type="text/javascript">
+            var toggle = true;
+
+            function changeColor(){
+                let r = Math.random() * 255 ;
+                let g = Math.random() * 255 ;
+                let b = Math.random() * 255 ;
+
+                if(toggle){
+                    document.querySelector('.header').style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+                    document.querySelector('.footer').style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+                    // document.querySelector('.contentBody').style.backgroundColor = `rgb( ${g}, ${r}, ${b} )`;
+                    document.querySelector('.button').style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+                    // document.querySelector('.column2').style.backgroundColor = `rgb( ${b}, ${r}, ${g} )`;
+                    document.querySelector('.boxDisplay').style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+                    document.querySelector('.boxTop').style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
+                    toggle = false;
+                }
+                else{
+                    document.querySelector('.header').style.backgroundColor = "skyblue";
+                    document.querySelector('.footer').style.backgroundColor = "skyblue";
+                    // document.querySelector('.contentBody').style.backgroundColor = "white";
+                    document.querySelector('.button').style.backgroundColor = "skyblue";
+                    // document.querySelector('.column2').style.backgroundColor = "white";
+                    document.querySelector('.boxDisplay').style.backgroundColor = "skyblue";
+                    document.querySelector('.boxTop').style.backgroundColor = "skyblue";
+                    toggle=true;
+                }
+            }
+        </script>
+        <!-- JAVA SCRIPT Ends -->
+    </body>
+    <!--------------------------- Body Ends ------------------------------>
+</html>
